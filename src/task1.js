@@ -1,5 +1,5 @@
-const process = require('process');
+import { stdin } from 'process';
 
-process.stdin.on('data', data => {
+stdin.on('data', data => {
   console.log(data.toString().trim().split('').reverse().join(''));
 })

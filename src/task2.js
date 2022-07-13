@@ -1,12 +1,12 @@
-const { createReadStream, createWriteStream } = require('fs');
-const csv = require('csvtojson');
-const path = require('path');
+import { createReadStream, createWriteStream } from 'fs';
+import csv from 'csvtojson';
+import { join } from 'path';
 
 const convert = () => {
   const inputFile = 'csv.csv';
   const outputFile = 'Output.txt';
-  const readableStream = createReadStream(path.join(__dirname, 'csv', inputFile));
-  const writableStream = createWriteStream(path.join(__dirname, 'csv', outputFile));
+  const readableStream = createReadStream(join(__dirname, 'csv', inputFile));
+  const writableStream = createWriteStream(join(__dirname, 'csv', outputFile));
   readableStream
     .pipe(csv({
       delimiter: [';'],
@@ -29,7 +29,7 @@ const convert = () => {
       console.log(error.message);
     })
     .on('finish', () => {
-      console.log(`Conversion process done, result in ${path.join(__dirname, 'csv', outputFile)}`);
+      console.log(`Conversion process done, result in ${join(__dirname, 'csv', outputFile)}`);
     })
 };
 
