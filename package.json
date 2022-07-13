@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "task1": "nodemon index.js",
-    "task2": "nodemon read.js"
+    "task1": "cd src && nodemon task1.js",
+    "task2": "cd src && nodemon task2.js"
   },
   "repository": {
     "type": "git",
