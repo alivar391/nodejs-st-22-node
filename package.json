@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-st-22-node",
+  "version": "1.0.0",
+  "description": "module2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task1": "cd src && nodemon task1.js",
+    "task2": "cd src && nodemon task2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alivar391/nodejs-st-22-node.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "alivar391",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alivar391/nodejs-st-22-node/issues"
+  },
+  "homepage": "https://github.com/alivar391/nodejs-st-22-node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
