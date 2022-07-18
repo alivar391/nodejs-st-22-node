@@ -21,12 +21,12 @@ const convert = () => {
     .pipe(writableStream);
 
   readableStream.on('error', error => {
-    console.log(error.message);
+    console.error(error.message);
   });
 
   writableStream
     .on('error', error => {
-      console.log(error.message);
+      console.error(error.message);
     })
     .on('finish', () => {
       console.log(`Conversion process done, result in ${path.join(__dirname, 'csv', outputFile)}`);
